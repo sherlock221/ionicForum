@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+
+//调色板
+
+
+.bg-indigo-400{
+  background: #5c6bc0
+}
+//默认500
+.bg-indigo-500{
+  background: #3f51b5;
+}
+.bg-indigo-600{
+  background: #3949ab;
+}
+
+.bg-indigo-700{
+  background: #303f9f;
+}
+
+
+
+
+//设置tab的点击颜色 以及底部横条
+md-tabs.md-default-theme md-tabs-ink-bar{
+  color: #ffffff;
+}
+
+
+//设置icon的颜色
+.icon-color-400{
+  color: #bdbdbd;
+}
+
+
+
+
+
+

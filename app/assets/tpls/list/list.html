@@ -1,0 +1,36 @@
+
+
+<section class="list-main  ">
+
+    <!--<md-select ng-model="fm.type" placeholder="全部"  >-->
+        <!--<md-option ng-value="type.typeName" ng-repeat="type in listTypes" ng-selected="type.selected">{{ type.typeName }}</md-option>-->
+    <!--</md-select>-->
+    <!--<md-progress-circular class="md-hue-2" md-mode="indeterminate"></md-progress-circular>-->
+
+    <!-- tab 部分 -->
+    <md-tabs   class="md-primary list-tab-abs" md-selected="selectedIndex" flex >
+        <!-- 最新 -->
+        <md-tab label="最新" >
+            <div class="demo-tab" layout="column" >
+            </div>
+        </md-tab>
+        <md-tab label="最热" >
+            <div class="demo-tab" layout="column" layout-align="space-around center">
+            </div>
+        </md-tab>
+        <md-tab label="随机" >
+            <div class="demo-tab" layout="column" layout-align="space-around center">
+            </div>
+        </md-tab>
+    </md-tabs>
+
+
+
+
+
+    <!-- 数据部分 md-whiteframe-z1-->
+    <div  ng-include=" 'assets/tpls/list/list-table.html' " class="content-paper nav md-whiteframe-z1 ">  </div>
+
+</section>
+
+

@@ -1,0 +1,20 @@
+{
+    "name": "ionicBBS",
+    "description": "ionicBBS project for AngularJS Material",
+    "version": "0.0.1",
+    "homepage": "https://github.com/angular/material-start",
+    "license": "MIT",
+    "private": true,
+    "dependencies": {
+        "angular": "^1.3.x",
+        "angular-route": "^1.3.x",
+        "angular-mocks": "^1.3.x",
+        "angular-animate": "v1.3.x",
+        "angular-aria": "^1.3.x",
+        "angular-material": "*",
+        "angular-ui-router": "*",
+        "jquery": "^2.0.x",
+        "angular-messages": "*",
+        " ngInfiniteScroll": "*"
+    }
+}

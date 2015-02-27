@@ -1,0 +1,58 @@
+<md-dialog aria-label="Mango (Fruit)" class="dialog-min">
+
+    <form   name="loginForm"  role="form"  novalidate>
+
+    <div class="auth ">
+
+        <md-toolbar class="md-primary">
+            <h1 class="md-toolbar-tools">
+                登录
+            </h1>
+        </md-toolbar>
+
+        <md-content class="md-padding">
+
+            <div layout="column">
+                <md-input-container flex  >
+                    <label>用户名</label>
+                    <input type="email"   ng-model="fm.userName"  name="userName" placeholder="邮箱/用户名/手机号"   required/>
+                    <div ng-messages="loginForm.userName.$error"   >
+                        <div ng-message="required">别忘了输入用户名.</div>
+                        <div ng-message="email">请输入正确邮箱格式.</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container flex>
+                    <label>密码</label>
+                    <input type="password"  name="passWord" ng-model="fm.passWord" required />
+                    <div ng-messages="loginForm.passWord.$error">
+                        <div ng-message="required">别忘了输入密码.</div>
+                    </div>
+                </md-input-container>
+
+            </div>
+
+        </md-content>
+
+
+    </div>
+
+
+    <div class="md-actions" layout="row">
+        <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" hide show-md>
+            More on Wikipedia
+        </md-button>
+        <span flex></span>
+        <md-button ng-click="answer('not useful')">
+            去注册
+        </md-button>
+
+        <md-button class="md-primary md-hue-2" type="submit" ng-disabled="loginForm.$invalid"  ng-click="login();">
+            <md-icon md-svg-src="assets/imgs/icon/ic_lock_open_24px.svg" ></md-icon>
+            <span class="lock-vm">登录</span>
+        </md-button>
+
+    </div>
+
+    </form>
+</md-dialog>

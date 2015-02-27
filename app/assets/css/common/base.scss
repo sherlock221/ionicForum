@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+//常量
+$navbar-height : 64px;
+
+
+////中文字体过大
+//@font-face {
+//  font-family: 'noto';
+//  src:  url("../../font/noto/NotoSansCJKsc-Light.otf");
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Roboto';
+//  src:  url("../../font/roboto/Roboto-Light.ttf") format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+//
+//@font-face {
+//  font-family: 'Roboto-Medium';
+//  src:  url("../../font/roboto/Roboto-Medium.ttf") format('truetype');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+
+//设置中文字体
+//button, select, html, textarea, input {
+//  font-family: RobotoDraft, Roboto, 'Helvetica Neue', 'noto',sans-serif;
+//}
+button, select, html, textarea, input {
+  font-family :  RobotoDraft,Roboto,"Helvetica Neue","noto","Hiragino Sans GB","Microsoft YaHei","微软雅黑","文泉驿微米黑",sans-serif;
+
+  //字体间距
+  letter-spacing: 0.03em;
+
+}
+
+
+html,body{
+
+  //字体内容的颜色
+  color: rgba(0, 0, 0, 0.6);
+
+}
+
+//常用方法
+.lock-vm{
+  vertical-align: middle;
+}
+.lock-ib{
+  display: inline-block;
+}
+.lock-block{
+  display: block;
+}
+
+/* 显示一行  溢出显示... */
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 显示一行 截断显示 */
+.text-clip {
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 强制换行显示 */
+/*  word-wrap 对于长英文无解*/
+.text-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/* 文字居中*/
+.text-center {
+  text-align: center;
+}
+
+/** 针对webkit 多行文本显示...  **/
+.multi-ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.list-base{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+//常用数值
+.lock-s24{
+   width: 24px;
+   height: 24px;
+ }
+
+.lock-s16{
+  width: 16px;
+  height: 16px;
+}
+.lock-s40{
+    width: 40px !important;
+    height : 40px !important;
+}
+
+.lock-s48{
+  width: 48px !important;
+  height : 48px !important;
+}
+
+.lock-no-shadow{
+  box-shadow: none !important;
+  -webkit-box-shadow : none !important;
+}
+
+
+//content
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+//content纸片设计
+.content{
+  margin-top:  $navbar-height;
+  position: relative;
+}
+
+//内容纸片
+.content-paper{
+  position: relative;
+  z-index: 30;
+  background: #ffffff;
+
+  &.nav{
+    top: 48px;
+  }
+}
+
+
+.hr-grey{
+  width: 100%;
+  margin: 15px 0;
+}
+
+
+
+//loading
+.loading-progress{
+  display: block;
+//  width: 100%;
+  margin-top: -4px;
+}
+
+
+
+//弹窗响应设计
+.dialog-min{
+  min-width: 400px;
+}
+@media screen and (max-width: 500px){
+  .dialog-min{
+    min-width: 240px;
+  }
+}
+
+
+
+
+
+//响应式工具
+
+//手机
+@media screen and (max-width: 600px){
+  .lock-show-pc{
+    display: none;
+  }
+  .lock-show-phone{
+    display: show;
+  }
+}
+
+//pc
+@media screen and (min-width: 601px){
+  .lock-show-pc{
+    display: block;
+  }
+  .lock-show-phone{
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+

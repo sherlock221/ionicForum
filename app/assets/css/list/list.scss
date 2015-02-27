@@ -1,0 +1,93 @@
+@charset "UTF-8";
+//list
+
+.list-tab-abs{
+  position: fixed;
+  z-index: 40;
+}
+
+.list-item{
+//  background: #fff;
+  cursor: pointer;
+  transition : all 0.4s 0s ease;
+  -webkit-transition : all 0.4s 0s ease;
+
+}
+
+
+.list-cmp{
+
+  .createTime{
+    font-size: 12px;
+    margin-right: 16px;
+    margin-bottom: 32px;
+  }
+
+  .face {
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    width: 48px;
+    margin: 16px;
+  }
+
+  .bar{
+    font-size: 12px;
+    margin-right: 3px;
+
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+}
+
+
+
+//列表表头颜色
+.md-tile-content h3{
+  color: rgba(0, 0, 0, 0.8);
+}
+
+//列表内容字体大小
+.md-tile-content p{
+  font-size: 0.85em;
+}
+
+
+//响应式
+@media (max-width: $screen-xs-max) {
+  .list-cmp{
+    .createTime{
+      font-size: 12px;
+      margin: 16px;
+    }
+  }
+}
+
+
+
+//卷轴动画
+.ani-scrollTop{
+  -webkit-animation : ani-scroll-top  0.6s   ease-in  0s  1 both;
+  position: relative;
+  z-index: 40;
+}
+
+@-webkit-keyframes ani-scroll-top {
+  0%{
+//    z-index: 40;
+    -webkit-transform:translateY(0);
+  }
+  99.9%{
+//    z-index: 40;
+  }
+  100%{
+//    z-index: 0;
+    -webkit-transform:translateY(-100%);
+
+  }
+}
+
+
+.pageload-overlay svg path {
+  fill: #3f51b5 !important;
+}

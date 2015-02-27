@@ -1,0 +1,47 @@
+.list-cmp {
+  background: gainsboro;
+  padding: 15px 12px; }
+
+.list-users {
+  margin-right: 25px; }
+  .list-users li a {
+    display: block;
+    margin-right: 5px;
+    border-radius: 65px;
+    overflow: hidden;
+    width: 25px;
+    height: 25px; }
+
+.list-type {
+  border-left: 5px solid blue;
+  padding-left: 9px;
+  display: inline-block;
+  line-height: 21px;
+  margin-right: 65px;
+  margin-left: 46px; }
+
+.list-title {
+  margin-bottom: 10px;
+  margin-top: 0; }
+
+.list-cmp-header {
+  background: none; }
+  .list-cmp-header .list-type {
+    padding-left: 0px; }
+    .list-cmp-header .list-type.noborder {
+      border: 0 none; }
+
+.list-users {
+  width: 145px;
+  min-width: 145px;
+  padding-left: 0; }
+
+.list-replys, .list-cks, .list-fromTime {
+  width: 65px;
+  text-align: center;
+  margin-right: 35px; }
+
+.list-type {
+  width: 60px; }
+
+/*# sourceMappingURL=list.css.map */

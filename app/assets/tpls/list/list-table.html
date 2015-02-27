@@ -1,0 +1,70 @@
+<section>
+    <md-list>
+        <md-list-item ng-repeat="post in posts" role="list"   >
+            <div class="list-item " >
+
+            <md-item-content  md-ink-ripple="#bbb"  class="list-cmp"  >
+                <div class="md-tile-left" >
+                    <img ng-src="{{post.topicUsers[0].userIcon}}"  class="face" alt="{{item.who}}">
+                </div>
+                <div class="md-tile-content" ng-click="showDetail(post)">
+                    <h3 >{{post.topicTitle}}</h3>
+                    <!--<h4>{{item.who}}</h4>-->
+                    <p  ng-bind-html="post.topicContent | to_trusted" class="text-ellipsis">
+                    </p>
+
+                    <div class="visible-xs-block">
+                        <div class=" lock-ib bar">
+                            <md-icon  md-svg-icon="social:comment"  class="icon-color-400 lock-s16" alt="评论次数"    ></md-icon>
+                            <span class="lock-ib lock-vm">120</span>
+                        </div>
+                        <div class="lock-ib  bar">
+                            <md-icon md-svg-icon="social:view"   class="icon-color-400 lock-s16" alt="查看次数"    ></md-icon>
+                            <span class="lock-ib lock-vm">1200K</span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <div class="md-tile-right ">
+
+                    <div class="createTime">
+                        <div class=" lock-ib bar hidden-xs">
+                            <md-icon  md-svg-icon="social:comment"  class="icon-color-400 lock-s16" alt="评论次数"    ></md-icon>
+                            <span class="lock-ib lock-vm">120</span>
+                        </div>
+                        <div class="lock-ib  bar hidden-xs">
+                            <md-icon md-svg-icon="social:view"   class="icon-color-400 lock-s16" alt="查看次数"    ></md-icon>
+                            <span class="lock-ib lock-vm">1200K</span>
+                        </div>
+                        <div class="lock-ib  bar">
+                            <md-icon md-svg-icon="social:time"   class="icon-color-400 lock-s16" alt="最后回复时间"    ></md-icon>
+                            <span class="lock-ib lock-vm"> 3分钟前</span>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+            </md-item-content>
+            <md-divider  md-inset  ng-hide="post.active"></md-divider>
+            <!-- loading按钮 -->  <!--<div   class="loading-progress" ng-if="post.active">-->
+                <!--<md-progress-linear class="md-p" md-mode="indeterminate"></md-progress-linear>-->
+                <!--</div>
+          -->
+
+
+
+
+            </div>
+        </md-list-item>
+
+
+
+    </md-list>
+
+
+
+
+
+</section>

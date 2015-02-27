@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <title>IonicCN BBS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <!-- css 引入部分 -->
+
+    <link rel="stylesheet" href="./bower_components/fontawesome/css/font-awesome.min.css">
+
+    <!--<link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">-->
+    <link rel="stylesheet" href="./bower_components/angular-ma/angular-material.css">
+    <link rel="stylesheet" href="./assets/css/app/app.css">
+
+    <!-- 类库 部分 -->
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-messages/angular-messages.min.js"></script>
+
+
+
+    <!--<script src="./bower_components/angular-material/angular-material.min.js"></script>-->
+    <script src="./bower_components/angular-ma/angular-material.js"></script>
+
+    <script type="text/javascript" src="bower_components/angular-infinite-scroll/ng-infinite-scroll.min.js"></script>
+
+    <!-- page loading -->
+    <link rel="stylesheet" href="bower_components/pageloading/me-pageloading.css" />
+    <script type="text/javascript" src="bower_components/pageloading/me-pageloading.js"></script>
+    <script type="text/javascript" src="bower_components/snap/snap.svg-min.js"></script>
+
+
+    <!-- 业务部分 -->
+    <script src="./assets/app.js"></script>
+    <script src="./assets/config.js"></script>
+    <script src="./assets/config.router.js"></script>
+    <script src="./assets/js/interceptors/ajaxInterceptors.js"></script>
+    <script src="./assets/js/filters/filters.js"></script>
+
+
+    <script src="./assets/js/controllers/app.ctrl.js"></script>
+    <script src="./assets/js/controllers/list.ctrl.js"></script>
+    <script src="./assets/js/controllers/detail.ctrl.js"></script>
+    <script src="./assets/js/controllers/auth/login.ctrl.js"></script>
+
+    <!-- list sev -->
+    <script type="text/javascript" src="./assets/js/services/list.sev.js"></script>
+</head>
+
+
+<body ng-app="ionicbbs" layout="column" ng-controller="AppCtrl">
+
+    <ui-view></ui-view>
+</body>
+
+</html>
