@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="route">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="me-pageloading.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            background: #4fc3f7;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        h1{
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            padding-top: 50px;
+        }
+        div.demo{
+            width: 100%;
+            position: fixed;
+            left: 50%;
+            top: 30%;
+            color: #fff;
+            font-size: 24px;
+            line-height: 2;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        a.demo{
+            cursor: pointer;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 24px;
+            border-bottom: 2px solid #fff;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body ng-controller="mainCtrl">
+    <h1>me-pageloading</h1>
+    <div ng-view></div>
+
+    <div class="demo">
+        点击
+        <br />
+        <a class="demo" ng-click="toggle()">此处</a>
+        <br />预览随机效果
+
+        <br />
+        <br />
+
+        预览特定效果
+        <br />
+        <select name="opt" id="opt" ng-model="effect" ng-change="show()">
+            <option value="random" selected>Random</option>
+            <option value="Lazy Stretch">Lazy Stretch</option>
+            <option value="Circle">Circle</option>
+            <option value="Spill">Spill</option>
+            <option value="Frame it">Frame it</option>
+            <option value="Tunnel vision">Tunnel vision</option>
+            <option value="Windscreen wiper">Windscreen wiper</option>
+            <option value="Jammed blind">Jammed blind</option>
+            <option value="Parallelogram">Parallelogram</option>
+            <option value="Tilted">Tilted</option>
+            <option value="Lateral Swipe">Lateral Swipe</option>
+            <option value="Wave">Wave</option>
+            <option value="Origami">Origami</option>
+            <option value="Curtain">Curtain</option>
+        </select>
+    </div>
+
+    <a href="https://github.com/jeremial/me-pageloading"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+    <script src="http://cdn.staticfile.org/snap.svg/0.2.0/snap.svg-min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.18/angular.min.js"></script>
+    <script src="http://cdn.staticfile.org/angular.js/1.2.18/angular-route.min.js"></script>
+    <script src="me-pageloading.min.js"></script>
+    <script>
+        angular.module('route', [
+            'ngRoute',
+            'me-pageloading'
+        ])
+        .config(['$routeProvider', 'mePageLoadingProvider', function($routeProvider, mePageLoadingProvider){
+
+            $routeProvider.when('/page1', {
+                template: '<div></div>',
+                controller: 'test1',
+                resolve: {
+                    data: ['$q', function($q){
+                        var defer = $q.defer();
+                        setTimeout(function(){
+                            defer.resolve('test1');
+                        }, 1500);
+                        return defer.promise;
+                    }]
+                }
+            })
+            .when('/page2', {
+                template: '<div></div>',
+                controller: 'page2',
+                resolve: {
+                    data: ['$q', function($q){
+                        var defer = $q.defer();
+                        setTimeout(function(){
+                            defer.resolve('page2');
+                        }, 1500);
+                        return defer.promise;
+                    }]
+                }
+            })
+            .otherwise({
+                redirectTo: '/page1'
+            });
+
+        }])
+        .controller('page1', ['data', function(data){
+
+        }])
+        .controller('page2', ['data', function(data){
+
+        }])
+        .controller('mainCtrl', ['$scope', '$location', 'mePageLoading', function($scope, $location, mePageLoading){
+            $scope.effect = 'random';
+            $scope.show = function(){
+                // 手动调用动画
+                mePageLoading.show($scope.effect);
+                setTimeout(function(){
+                    mePageLoading.hide();
+                }, 1500);
+            };
+            $scope.toggle = function(){
+                // 自动调用动画
+                if($location.path() === '/page1'){
+                    $location.path('/page2');
+                }else{
+                    $location.path('/page1');
+                }
+            };
+        }])
+        ;
+    </script>
+</body>
+</html>
