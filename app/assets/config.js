@@ -35,7 +35,7 @@ IonicBBS
     //设置常量
     .constant("SERVER", {
         url: {
-            ionicbbs: "/ionicBBS/data"
+            ionicbbs: "/ionicForum/data"
         },
         testUrl: {
             uc: "http://10.10.68.11:8080/v1",

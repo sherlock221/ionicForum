@@ -271,9 +271,10 @@ html, body {
 .content-paper {
   position: relative;
   z-index: 30;
-  background: #ffffff; }
+  background: #ffffff;
+  min-height: 500px; }
   .content-paper.nav {
-    top: 48px; }
+    padding-top: 48px; }
 
 .hr-grey {
   width: 100%;
@@ -383,7 +384,8 @@ header.fixed {
 
 .list-tab-abs {
   position: fixed;
-  z-index: 40; }
+  z-index: 40;
+  top: 64px; }
 
 .list-item {
   cursor: pointer;

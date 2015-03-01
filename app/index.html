@@ -23,7 +23,6 @@
     <script src="./bower_components/angular-messages/angular-messages.min.js"></script>
 
 
-
     <!--<script src="./bower_components/angular-material/angular-material.min.js"></script>-->
     <script src="./bower_components/angular-ma/angular-material.js"></script>
 
@@ -31,8 +30,8 @@
 
     <!-- page loading -->
     <link rel="stylesheet" href="bower_components/pageloading/me-pageloading.css" />
-    <script type="text/javascript" src="bower_components/pageloading/me-pageloading.js"></script>
     <script type="text/javascript" src="bower_components/snap/snap.svg-min.js"></script>
+    <script type="text/javascript" src="bower_components/pageloading/me-pageloading.js"></script>
 
 
     <!-- 业务部分 -->
@@ -44,6 +43,7 @@
 
 
     <script src="./assets/js/controllers/app.ctrl.js"></script>
+    <script src="./assets/js/controllers/content.ctrl.js"></script>
     <script src="./assets/js/controllers/list.ctrl.js"></script>
     <script src="./assets/js/controllers/detail.ctrl.js"></script>
     <script src="./assets/js/controllers/auth/login.ctrl.js"></script>
@@ -53,9 +53,11 @@
 </head>
 
 
-<body ng-app="ionicbbs" layout="column" ng-controller="AppCtrl">
 
+
+<body ng-app="ionicbbs" layout="column" ng-controller="AppCtrl">
     <ui-view></ui-view>
 </body>
+
 
 </html>

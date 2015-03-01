@@ -1,15 +1,7 @@
-IonicBBS.controller("ListCtrl",function($state,$rootScope,$scope,ListSev,mePageLoading){
+IonicBBS.controller("ListCtrl",function($state,$rootScope,$scope,ListSev,$timeout){
 
 
-//    $scope.effect = "Jammed blind";
-    $scope.effect = "Wave";
-    var show = function(){
-        // 手动调用动画
-        mePageLoading.show($scope.effect);
-        setTimeout(function(){
-            mePageLoading.hide();
-        }, 2500);
-    };
+
 
     $scope.listTypes = [
         {
@@ -65,12 +57,10 @@ IonicBBS.controller("ListCtrl",function($state,$rootScope,$scope,ListSev,mePageL
 
 
 
-
     //显示详情
     $scope.showDetail = function(post){
         post.active = true;
-        show();
-       // $state.go("app.detail");
+        $state.go("app.detail");
     }
 
 });

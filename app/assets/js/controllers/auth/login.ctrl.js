@@ -4,8 +4,8 @@ IonicBBS.controller("LoginCtrl",function($scope,$rootScope){
 
     //表单部分
     $scope.fm = {
-        userName : "920825209@qq.com",
-        passWord : "123456"
+//        userName : "",
+//        passWord : ""
     }
 
     $scope.login = function(){

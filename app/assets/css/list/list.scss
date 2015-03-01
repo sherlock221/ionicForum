@@ -4,6 +4,7 @@
 .list-tab-abs{
   position: fixed;
   z-index: 40;
+  top: $navbar-height;
 }
 
 .list-item{
@@ -83,11 +84,11 @@
   100%{
 //    z-index: 0;
     -webkit-transform:translateY(-100%);
-
   }
 }
 
 
 .pageload-overlay svg path {
   fill: #3f51b5 !important;
+
 }

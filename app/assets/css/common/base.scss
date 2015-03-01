@@ -150,8 +150,10 @@ html,body{
   z-index: 30;
   background: #ffffff;
 
+  min-height: 500px;
+
   &.nav{
-    top: 48px;
+    padding-top: 48px;
   }
 }
 

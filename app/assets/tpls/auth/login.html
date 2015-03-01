@@ -15,8 +15,8 @@
             <div layout="column">
                 <md-input-container flex  >
                     <label>用户名</label>
-                    <input type="email"   ng-model="fm.userName"  name="userName" placeholder="邮箱/用户名/手机号"   required/>
-                    <div ng-messages="loginForm.userName.$error"   >
+                    <input type="email"   ng-model="fm.userName"  name="userName" placeholder="邮箱/用户名/手机号"   />
+                    <div ng-messages="loginForm.userName.$error">
                         <div ng-message="required">别忘了输入用户名.</div>
                         <div ng-message="email">请输入正确邮箱格式.</div>
                     </div>
@@ -24,7 +24,7 @@
 
                 <md-input-container flex>
                     <label>密码</label>
-                    <input type="password"  name="passWord" ng-model="fm.passWord" required />
+                    <input type="password"  name="passWord" ng-model="fm.passWord"  />
                     <div ng-messages="loginForm.passWord.$error">
                         <div ng-message="required">别忘了输入密码.</div>
                     </div>
